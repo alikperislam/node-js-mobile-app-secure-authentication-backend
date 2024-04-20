@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+  <style>
+    /* Tüm elemanların margin ve padding'ini sıfırla */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Kartın stil özellikleri */
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #5E4C91;
+      /* Kartın arka plan rengi */
+      border-radius: 25px;
+      /* Kartın köşe yarıçapı */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      color: #FFFFFF;
+      /* Metin rengi */
+      text-align: center;
+    }
+
+    /* Kutular için stil */
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    td {
+      width: 50px;
+      /* Kutu boyutu */
+      height: 50px;
+      /* Kutu boyutu */
+      text-align: center;
+      vertical-align: middle;
+      background-color: #FFFFFF;
+      border-radius: 15px;
+    }
+
+    span {
+      font-size: 30px;
+      color: #bfacff;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      line-height: 50px;
+      /* Rakamın kutu içinde dikey ortalanması */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Hey mate,</h2>
+    <p>your email verification code is below!</p>
+    <table>
+      <tr>
+        <td><span>{{%content1%}}</span></td>
+        <td><span>{{%content2%}}</span></td>
+        <td><span>{{%content3%}}</span></td>
+        <td><span>{{%content4%}}</span></td>
+        <td><span>{{%content5%}}</span></td>
+        <td><span>{{%content6%}}</span></td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
