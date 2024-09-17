@@ -48,7 +48,7 @@ router.post(process.env.REGISTER_POST_PATH, async (req, res) => {
             });
 
         //Todo: kullaniciya token don.
-        await res.setHeader('authorization', userToken);
+        await res.setHeader('authorization', Encryption.funcEncryptedData(userToken));
         await res.status(200).send(
             {
                 "message": Encryption.funcEncryptedData(process.env.SIGN_IN_RETURN_VALUE),
