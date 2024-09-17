@@ -64,7 +64,7 @@ function funcTokenController(userMail, res) {
             else {
                 getUserNameFromDatabase(usersData.userId).then(async profileData => {
                     //Todo: kullanici ve token mevcut. Kullaniciya token'i geri dondur. LogIn islemi basarili.
-                    await res.setHeader('authorization', usersData.userToken);
+                    await res.setHeader('authorization', Encryption.funcEncryptedData(usersData.userToken));
                     await res.status(200).send(
                         {
                             "message": Encryption.funcEncryptedData(process.env.LOG_IN_RETURN_VALUE),
